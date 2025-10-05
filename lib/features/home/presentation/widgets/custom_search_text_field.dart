@@ -10,9 +10,13 @@ class CustomSearchTextField extends StatelessWidget {
         enabledBorder: buildOutlineInputBorder(),
         focusedBorder: buildOutlineInputBorder(),
         hintText: 'Search Recipes',
-        suffixIcon: IconButton(
+        hintStyle: const TextStyle(color: Colors.grey),
+        prefixIcon: IconButton(
           onPressed: () {},
-          icon: const Opacity(opacity: .8, child: Icon(Icons.search, size: 22)),
+          icon: const Opacity(
+            opacity: .8,
+            child: Icon(Icons.search, size: 22, color: Colors.grey),
+          ),
         ),
       ),
     );
@@ -20,7 +24,7 @@ class CustomSearchTextField extends StatelessWidget {
 
   OutlineInputBorder buildOutlineInputBorder() {
     return OutlineInputBorder(
-      borderSide: const BorderSide(),
+      borderSide: const BorderSide(color: Colors.grey),
       borderRadius: BorderRadius.circular(20),
     );
   }
