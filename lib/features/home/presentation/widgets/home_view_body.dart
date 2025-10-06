@@ -1,8 +1,12 @@
+import 'package:chefly/core/utils/api_service.dart';
 import 'package:chefly/core/utils/styles.dart';
+import 'package:chefly/features/home/data/cubit/meals_cubit.dart';
 import 'package:chefly/features/home/presentation/widgets/custom_app_bar.dart';
 import 'package:chefly/features/home/presentation/widgets/custom_search_text_field.dart';
 import 'package:chefly/features/home/presentation/widgets/recipes.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -29,7 +33,10 @@ class HomeViewBody extends StatelessWidget {
               ],
             ),
             SizedBox(height: 10),
-            Recipes(),
+            BlocProvider(
+              create: (context) => MealsCubit(ApiService(Dio()))..fetchMeals(),
+              child: const Recipes(),
+            ),
           ],
         ),
       ),
