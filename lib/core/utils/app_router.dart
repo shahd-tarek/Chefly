@@ -1,5 +1,9 @@
+import 'package:chefly/core/utils/api_service.dart';
+import 'package:chefly/features/home/data/cubit/details_cubit.dart';
 import 'package:chefly/features/home/presentation/views/home_view.dart';
-import 'package:chefly/features/home/presentation/views/recipes_details.dart';
+import 'package:chefly/features/home/presentation/widgets/recipes_details_view_body.dart';
+import 'package:dio/dio.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../Features/Splash/presentation/views/splash_view.dart';
@@ -14,8 +18,15 @@ abstract class AppRouter {
       GoRoute(path: '/', builder: (context, state) => const SplashView()),
       GoRoute(path: '/homeView', builder: (context, state) => const HomeView()),
       GoRoute(
-        path: '/recipesDetailsView',
-        builder: (context, state) => const RecipesDetails(),
+        path: '/recipesDetailsView/:mealId',
+        builder: (context, state) {
+          final mealId = state.pathParameters['mealId']!;
+
+          return BlocProvider(
+            create: (context) => DetailsCubit(ApiService(Dio())),
+            child: RecipesDetailsViewBody(mealId: mealId),
+          );
+        },
       ),
     ],
   );

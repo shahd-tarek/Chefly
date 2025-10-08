@@ -1,5 +1,4 @@
 import 'package:chefly/constants.dart';
-import 'package:chefly/core/utils/app_router.dart';
 import 'package:chefly/features/home/data/cubit/meals_cubit.dart';
 import 'package:chefly/features/home/data/cubit/meals_state.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +30,9 @@ class Recipes extends StatelessWidget {
                 final meal = meals[index];
                 return GestureDetector(
                   onTap: () {
-                    GoRouter.of(context).push(AppRouter.kRecipesDetailsView);
+                    GoRouter.of(
+                      context,
+                    ).push('/recipesDetailsView/${meal.idMeal}');
                   },
                   child: Card(
                     color: kPrimaryColor,
@@ -58,7 +59,7 @@ class Recipes extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
-                            mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
                                 meal.strMeal,
