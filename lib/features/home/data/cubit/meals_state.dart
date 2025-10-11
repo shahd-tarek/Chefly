@@ -1,7 +1,6 @@
 import 'package:chefly/features/home/data/models/recipes_model.dart';
 import 'package:equatable/equatable.dart';
 
-
 abstract class MealsState extends Equatable {
   const MealsState();
 
@@ -22,4 +21,3 @@ class MealsFailure extends MealsState {
   final String errormessage;
   const MealsFailure(this.errormessage);
 }
-

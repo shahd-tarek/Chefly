@@ -5,9 +5,10 @@ class MealResponse {
 
   factory MealResponse.fromJson(Map<String, dynamic> json) {
     return MealResponse(
-      meals: (json['meals'] as List)
-          .map((mealJson) => Meal.fromJson(mealJson))
-          .toList(),
+      meals:
+          (json['meals'] as List)
+              .map((mealJson) => Meal.fromJson(mealJson))
+              .toList(),
     );
   }
 }
@@ -42,7 +43,6 @@ class Meal {
   });
 
   factory Meal.fromJson(Map<String, dynamic> json) {
-    // هنا بنجمع المكونات والمقادير من strIngredient1 إلى strIngredient20
     List<String> ingredients = [];
     List<String> measures = [];
 
@@ -73,4 +73,13 @@ class Meal {
       strSource: json['strSource'],
     );
   }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    return other is Meal && other.idMeal == idMeal;
+  }
+
+  @override
+  int get hashCode => idMeal.hashCode;
 }

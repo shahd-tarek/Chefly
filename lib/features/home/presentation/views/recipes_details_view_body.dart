@@ -59,23 +59,31 @@ class _RecipesDetailsViewBodyState extends State<RecipesDetailsViewBody> {
                     style: const TextStyle(color: Colors.grey),
                   ),
                   const SizedBox(height: 16),
-                   Text(
+                  Text(
                     "Instructions:",
-                    style:Styles.textStyle18.copyWith(fontWeight: FontWeight.bold,)),
+                    style: Styles.textStyle18.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   const SizedBox(height: 8),
                   Text(meal.strInstructions),
                   const SizedBox(height: 16),
-                   Text(
+                  Text(
                     "Ingredients:",
-                    style:Styles.textStyle18.copyWith(fontWeight: FontWeight.bold,)),
+                    style: Styles.textStyle18.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   const SizedBox(height: 8),
                   ...List.generate(meal.ingredients.length, (index) {
                     final ingredient = meal.ingredients[index];
                     final measure = meal.measures[index];
                     return ListTile(
                       contentPadding: EdgeInsets.zero,
-                      leading: const Icon(Icons.check_circle_outline,
-                          color: kPrimaryColor),
+                      leading: const Icon(
+                        Icons.check_circle_outline,
+                        color: kPrimaryColor,
+                      ),
                       title: Text(ingredient),
                       subtitle: Text(measure.isNotEmpty ? measure : ''),
                     );

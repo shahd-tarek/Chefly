@@ -1,3 +1,4 @@
+import 'package:chefly/features/favourite/presentation/views/favourite_view.dart';
 import 'package:chefly/features/home/presentation/widgets/bottom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:chefly/features/home/presentation/widgets/home_view_body.dart';
@@ -14,7 +15,7 @@ class _HomeViewState extends State<HomeView> {
 
   final List<Widget> _pages = [
     const HomeViewBody(),
-    Center(child: Text("Favorite Page", style: TextStyle(fontSize: 22))),
+    FavouriteView(),
     Center(child: Text("Profile Page", style: TextStyle(fontSize: 22))),
   ];
 

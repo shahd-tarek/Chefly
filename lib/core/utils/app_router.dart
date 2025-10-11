@@ -1,7 +1,8 @@
 import 'package:chefly/core/utils/api_service.dart';
+import 'package:chefly/features/favourite/presentation/views/favourite_view.dart';
 import 'package:chefly/features/home/data/cubit/details_cubit.dart';
 import 'package:chefly/features/home/presentation/views/home_view.dart';
-import 'package:chefly/features/home/presentation/widgets/recipes_details_view_body.dart';
+import 'package:chefly/features/home/presentation/views/recipes_details_view_body.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -12,6 +13,7 @@ abstract class AppRouter {
   static const kHomeView = '/homeView';
   static const kRecipesDetailsView = '/recipesDetailsView';
   static const kSearchView = '/searchView';
+  static const kFavView = '/favouriteView';
 
   static final router = GoRouter(
     routes: [
@@ -27,6 +29,10 @@ abstract class AppRouter {
             child: RecipesDetailsViewBody(mealId: mealId),
           );
         },
+      ),
+      GoRoute(
+        path: '/favouriteView',
+        builder: (context, state) => const FavouriteView(),
       ),
     ],
   );

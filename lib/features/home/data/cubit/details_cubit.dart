@@ -6,12 +6,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class DetailsCubit extends Cubit<DetailsState> {
   final ApiService apiService;
 
-  DetailsCubit (this.apiService) : super(DetailsInitial());
+  DetailsCubit(this.apiService) : super(DetailsInitial());
 
   Future<void> fetchDetails(String mealId) async {
     emit(DetailsLoading());
     try {
-    final data = await apiService.get(endPoint: 'lookup.php?i=$mealId');
+      final data = await apiService.get(endPoint: 'lookup.php?i=$mealId');
       final mealResponse = MealResponse.fromJson(data);
       final meal = mealResponse.meals.first;
       emit(DetailsSuccess(meal));
