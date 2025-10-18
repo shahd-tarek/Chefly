@@ -4,8 +4,10 @@ A Flutter application for exploring and discovering delicious recipes with a sim
 
 ---
 
-## Demo
-[![Watch the Demo](https://github.com/shahd-tarek/Chefly/raw/master/assets/images/demo_thumbnail.png)](https://github.com/shahd-tarek/Chefly/raw/master/assets/images/demo.mp4)
+## Demo 
+
+https://github.com/user-attachments/assets/6d67a456-a05e-4e1d-85c7-fc3c48712638
+
 
 ---
 
