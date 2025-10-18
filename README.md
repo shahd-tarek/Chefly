@@ -5,9 +5,7 @@ A Flutter application for exploring and discovering delicious recipes with a sim
 ---
 
 ## Demo
-<video src="https://github.com/shahd-tarek/Chefly/raw/master/assets/images/demo.mp4" controls width="350">
-  Your browser does not support the video tag.
-</video>
+[![Watch the Demo](https://github.com/shahd-tarek/Chefly/raw/master/assets/images/demo_thumbnail.png)](https://github.com/shahd-tarek/Chefly/raw/master/assets/images/demo.mp4)
 
 ---
 
