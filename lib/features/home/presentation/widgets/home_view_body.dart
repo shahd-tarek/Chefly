@@ -24,10 +24,13 @@ class HomeViewBody extends StatelessWidget {
             SizedBox(height: 20),
             Row(
               children: [
-                Text(
-                  "Popular Recipes",
-                  style: Styles.textStyle20.copyWith(
-                    fontWeight: FontWeight.w600,
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Text(
+                    "Popular Recipes",
+                    style: Styles.textStyle20.copyWith(
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ],

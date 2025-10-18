@@ -1,4 +1,5 @@
 import 'package:chefly/constants.dart';
+import 'package:chefly/core/utils/styles.dart';
 import 'package:chefly/features/favourite/data/cubit/favourite_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,9 +12,11 @@ class FavouriteView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'Your Favourites',
-          style: TextStyle(fontWeight: FontWeight.bold),
+         style: Styles.textStyle20.copyWith(
+                      fontWeight: FontWeight.w600,
+                    ),
         ),
         backgroundColor: kPrimaryColor,
       ),
