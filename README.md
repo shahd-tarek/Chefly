@@ -1,16 +1,30 @@
-# chefly
+# Chefly
 
-A new Flutter project.
+A Flutter application for exploring and discovering delicious recipes with a simple and modern UI.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## Demo
+<video src="https://github.com/shahd-tarek/Chefly/raw/master/assets/images/demo.mp4" controls width="350">
+  Your browser does not support the video tag.
+</video>
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Features
+- Browse and search for meals from **TheMealDB API**
+- View meal details including ingredients and instructions
+- Add meals to favorites
+- Simple, clean, and responsive UI built with Flutter
+- Uses **Dio** for API calls and **Cubit** for state management
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Technologies Used
+- **Flutter**   
+- **Dart** 
+- **Dio** (for networking)  
+- **Bloc/Cubit** (for state management)  
+- **TheMealDB API** (for recipes data)
+
+
